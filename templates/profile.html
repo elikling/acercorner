@@ -4,10 +4,12 @@
 
 {% block content %}
 <div class="container">
-    <h1>About Jo Naiman</h1>
+    <!-- Place image first so text wraps around it -->
+    <div class="profile-image">
+        <img src="/static/images/Jo01.jpg" alt="Jo Naiman">
+    </div>
 
     <div class="profile-section">
-        <img src="/static/images/Jo01.jpg" alt="Jo Naiman" class="profile-image">
         <p>
             My name is Jo Naiman, and Acer Corner is the name I use for the company. I originally studied electrical engineering and worked for 20 years in IT, mostly for Telecommunications companies, developing software and later designing and project managing large billing projects. While software design and project management present some creative challenges, after 20 years I was looking for a different outlet for my creativity.
         </p>
@@ -22,42 +24,44 @@
         </p>
         <p>I am a member of the Japanese Garden Society. The gardens I design are not Japanese, but I do follow some Japanese principles in both design and maintenance.</p>
     </div>
+    <div style="clear: both;"></div> <!-- Clear floats -->
 </div>
 
 <style>
-.profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    padding: 20px;
-    margin-top: 20px;
-}
-
 .profile-image {
     float: right; /* Float image to the right */
-    margin-left: 20px; /* Add some margin to the left of the image */
-    border-radius: 5px; /* Give it rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    width: 300px; /* Set a maximum width for the image */
+    width: 25%; /* Set image container width */
+    margin-left: 20px; /* Space between image and text */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image img {
+    width: 100%; /* Image fills container */
     height: auto; /* Maintain aspect ratio */
 }
 
-.profile-section p {
-    text-align: left; /* Align text to the left */
-    margin-bottom: 1rem;
-    line-height: 1.6; /* Improve readability */
+.profile-section {
+    /* No float here, text flows naturally */
+    overflow: hidden; /* Contain floats */
 }
 
-/* Responsive adjustments for smaller screens */
+.profile-section p {
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .profile-image {
-        float: none; /* Don't float on small screens */
-        margin: 0 auto 20px auto; /* Center image and add margin */
-        width: 100%; /* Make image take up full width on small screens */
-        max-width: 300px; /* Keep a max width if needed */
+        float: none;
+        width: 50%;
+        margin: 0 auto 20px auto;
+        display: block;
     }
-    .profile-section {
-        padding: 10px;
+    .profile-image img {
+        width: 100%;
     }
 }
 </style>
