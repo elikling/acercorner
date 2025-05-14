@@ -17,6 +17,12 @@
             --light-gray: #f0f0f0; 
         }
         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -24,22 +30,26 @@
             background-color: var(--light-bg);
             color: var(--text-color);
             line-height: 1.6;
+            width: 100%;
+            overflow-x: hidden;
         }
         
         .container {
             width: 80%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0;
         }
         
         .banner {
-            width: 100%;
+            width: 100vw;
             height: 250px;
             background-image: url('/static/images/acer_corner_banner.png');
             background-size: cover;
             background-position: center;
             position: relative;
+            margin: 0;
+            padding: 0;
         }
         
         .banner::after {
@@ -56,6 +66,8 @@
             background-color: var(--dark-gray);
             padding: 15px 0;
             text-align: center;
+            width: 100%;
+            margin: 0;
         }
         
         .nav-menu ul {
@@ -87,11 +99,13 @@
             color: var(--autumn-darkred);
             text-align: center;
             padding: 15px 0;
-            margin-bottom: 30px;
+            margin: 0 0 30px 0;
+            width: 100%;
         }
         
         .open-garden-info p {
-            margin: 50px 0;
+            margin: 0;
+            padding: 5px 0;
         }
         
         .content {
@@ -104,6 +118,7 @@
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
+            width: 100%;
         }
         
         h1, h2, h3 {
@@ -172,7 +187,7 @@
             <a href="https://www.sbjc.org.uk/">SBJC] </a>
             <strong>(Sat 07 & Sun 08 June) +  </strong>
             <strong>(Sat 18 & Sun 19 October) 2025 </strong>
-            <em><strong>{14:00 - 17:00}</strong></em>
+            <em><strong>{14:00 - 17:00}</strong></em></p>
         </div>
     </div>
     
