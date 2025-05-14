@@ -3,36 +3,44 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-
   <div class="container">
     <h1>Acer Corner, Wendover</h1>
-    <p class="highlight">A designer’s garden with Japanese influence and a remarkable collection of Acer palmatum Japanese maples.</p>
-
+    
+    <div class="image-right">
+      <img src="/static/images/acercorner01.jpg" alt="Acer Corner">
+    </div>
+    
+    <p class="highlight">A designer's garden with Japanese influence and a remarkable collection of Acer palmatum Japanese maples.</p>
+    
     <div class="section">
       <h2>Welcome</h2>
       <p>
-        Nestled in Wendover, Acer Corner is a garden designed and nurtured by a passionate garden designer, celebrated for its extensive collection of Japanese maples and serene Japanese-inspired style. The enclosed front garden evokes the tranquillity of Japan, while the back garden unfolds into three distinct areas, each offering its own character and seasonal interest.<br>
+        Nestled in Wendover, Acer Corner is a garden designed and nurtured by a passionate garden designer, celebrated for its extensive collection of Japanese maples and serene Japanese-inspired style. The enclosed front garden evokes the tranquillity of Japan, while the back garden unfolds into three distinct areas, each offering its own character and seasonal interest.
       </p>
     </div>
-
+    
     <div class="section">
       <h2>Garden Features</h2>
       <ul>
         <li>
-          <strong>Japanese-Style Front Garden:</strong> An enclosed space inspired by traditional Japanese gardens, offering calm and contemplative beauty.<br>
+          <strong>Japanese-Style Front Garden:</strong> An enclosed space inspired by traditional Japanese gardens, offering calm and contemplative beauty.
         </li>
         <li>
-          <strong>Redesigned Patio Area:</strong> The patio has been recently transformed with Japanese design elements, perfect for relaxing and enjoying the view.<br>
+          <strong>Redesigned Patio Area:</strong> The patio has been recently transformed with Japanese design elements, perfect for relaxing and enjoying the view.
         </li>
         <li>
-          <strong>Densely Planted Borders:</strong> Discover a rich tapestry of acers and roses, providing vibrant colour and interest throughout the seasons.<br>
+          <strong>Densely Planted Borders:</strong> Discover a rich tapestry of acers and roses, providing vibrant colour and interest throughout the seasons.
         </li>
         <li>
-          <strong>Productive Greenhouse Corner:</strong> A tucked-away corner featuring a greenhouse and diverse, interesting planting.<br>
+          <strong>Productive Greenhouse Corner:</strong> A tucked-away corner featuring a greenhouse and diverse, interesting planting.
         </li>
       </ul>
     </div>
-
+    
+    <div class="image-left">
+      <img src="/static/images/20210519_191830.jpg" alt="Acer Corner">
+    </div>
+    
     <div class="open-days">
       <h2>Open Garden Days 2025</h2>
       <p>
@@ -42,14 +50,14 @@
       </p>
       <p>For group visits outside our open days, please contact us using the <a href="/contact">contact form</a>.</p>
     </div>
-
+    
     <div class="section">
       <h2>Garden Advice & Design</h2>
       <p>
-        Whether you are looking to refresh your own garden or need a complete transformation, Acer Corner offers expert advice and planting plans tailored to your taste and lifestyle. Guidance is available for DIY projects or full redesigns, ensuring your garden truly works for you.<br>
+        Whether you are looking to refresh your own garden or need a complete transformation, Acer Corner offers expert advice and planting plans tailored to your taste and lifestyle. Guidance is available for DIY projects or full redesigns, ensuring your garden truly works for you.
       </p>
     </div>
-
+    
     <div class="contact">
       <h2>Contact & Location</h2>
       <p>
@@ -63,7 +71,74 @@
     </div>
   </div>
 
-
-
-
+  <style>
+    .container h1 {
+      margin-bottom: 1.5rem;
+      color: var(--autumn-darkred);
+    }
+    
+    .highlight {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--autumn-darkred);
+      margin-bottom: 1.5rem;
+    }
+    
+    .section {
+      margin-bottom: 2rem;
+    }
+    
+    .section h2 {
+      margin-bottom: 1rem;
+    }
+    
+    .section ul {
+      padding-left: 1.5rem;
+    }
+    
+    .section li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .open-days {
+      background-color: var(--light-gray);
+      padding: 1.5rem;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      color: var(--autumn-darkred);
+    }
+    
+    .contact {
+      background-color: #f5f5f5;
+      padding: 1.5rem;
+      border-radius: 5px;
+    }
+    
+    .image-right {
+      float: right;
+      margin: 0 0 20px 20px;
+      width: 300px;
+    }
+    
+    .image-left {
+      float: left;
+      margin: 0 20px 20px 0;
+      width: 300px;
+    }
+    
+    .image-right img, .image-left img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .image-right, .image-left {
+        float: none;
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+    }
+  </style>
 {% endblock %}
