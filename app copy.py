@@ -42,19 +42,5 @@ def gallery():
                 image_urls.append(f"{AZURE_BLOB_URL}/{AZURE_CONTAINER_NAME}/{blob.name}")
     return render_template('gallery.html', image_urls=image_urls)
 
-@app.route('/gallery')
-def gallery():
-    image_urls = []
-    if AZURE_STORAGE_CONNECTION_STRING and AZURE_CONTAINER_NAME:
-        container = ContainerClient.from_connection_string(
-            AZURE_STORAGE_CONNECTION_STRING, AZURE_CONTAINER_NAME
-        )
-        blobs = container.list_blobs()
-        for blob in blobs:
-            # Only include image files (optional: filter by extension)
-            if blob.name.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp')):
-                image_urls.append(f"{AZURE_BLOB_URL}/{AZURE_CONTAINER_NAME}/{blob.name}")
-    return render_template('gallery.html', image_urls=image_urls)
-
 if __name__ == '__main__':
     app.run(debug=True)
