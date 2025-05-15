@@ -5,3 +5,4 @@ Jinja2
 MarkupSafe
 itsdangerous
 click
+azure-storage-blob

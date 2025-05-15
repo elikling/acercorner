@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Photo Gallery{% endblock %}
+
+{% block content %}
+  <h1>Photo Gallery</h1>
+  <div id="carousel-container">
+    <img id="carousel-image" src="{{ image_urls[0] }}" alt="Gallery Image" style="width:100%;max-width:600px;border-radius:8px;box-shadow:0 3px 10px rgba(0,0,0,0.2);">
+  </div>
+  <style>
+    #carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      min-height: 350px;
+    }
+  </style>
+  <script>
+    const images = {{ image_urls|tojson }};
+    let idx = 0;
+    setInterval(() => {
+      idx = (idx + 1) % images.length;
+      document.getElementById('carousel-image').src = images[idx];
+    }, 1000);
+  </script>
+{% endblock %}
