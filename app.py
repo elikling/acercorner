@@ -1,11 +1,14 @@
 from flask import Flask, render_template
 from azure.storage.blob import ContainerClient
 import os
+from dotenv import load_dotenv  # Add this import
+
+load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 
-# Set these as environment variables or replace with your values
-AZURE_STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=acercornerstorage;AccountKey=OHZ0XFSqiKFJ4F78FE1k7zEKortlcEFOfK6zk3jIeV2I8F82lQcKP+swFw6b2UlUrVmLnUVSId8j+AStEK7G+A==;EndpointSuffix=core.windows.net"
+# Read the connection string from environment variable using dotenv
+AZURE_STORAGE_CONNECTION_STRING = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
 AZURE_CONTAINER_NAME = "photogalery"
 AZURE_BLOB_URL = "https://acercornerstorage.blob.core.windows.net"
 
