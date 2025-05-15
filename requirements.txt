@@ -6,3 +6,4 @@ MarkupSafe
 itsdangerous
 click
 azure-storage-blob
+python-dotenv
